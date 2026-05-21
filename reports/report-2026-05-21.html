@@ -123,11 +123,11 @@ p.note { font-size: 12px; color: #5c5448; margin-top: 10px; font-style: italic; 
 .forex-name { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #5c5448; margin-bottom: 4px; }
 .forex-price { font-family: 'DM Mono', monospace; font-size: 16px; color: #f0ead8; }
 .forex-pct { font-family: 'DM Mono', monospace; font-size: 11px; margin-top: 2px; }
-.ratio-row { display: flex; justify-content: space-between; align-items: center; padding: 9px 0; border-bottom: 1px solid #1a1814; font-size: 12px; }
+.ratio-row { display: grid; grid-template-columns: 2fr 1fr 2fr; align-items: center; padding: 9px 0; border-bottom: 1px solid #1a1814; font-size: 12px; gap: 8px; }
 .ratio-row:last-child { border-bottom: none; }
 .ratio-key { color: #9a9080; }
-.ratio-val { font-family: 'DM Mono', monospace; color: #f0ead8; font-weight: 500; }
-.ratio-sig { font-size: 11px; color: #7a7060; text-align: right; max-width: 55%; }
+.ratio-val { font-family: 'DM Mono', monospace; color: #f0ead8; font-weight: 500; text-align: right; padding-right: 12px; }
+.ratio-sig { font-size: 11px; color: #7a7060; text-align: right; }
 .trade-banner { border-radius: 4px; padding: 16px 20px; margin-bottom: 28px; text-align: center; }
 .trade-banner.blackout { background: #200d0d; border: 1px solid #e05a5a; }
 .trade-banner.clear { background: #0b1a10; border: 1px solid #1d4030; }
@@ -147,40 +147,39 @@ p.note { font-size: 12px; color: #5c5448; margin-top: 10px; font-style: italic; 
 <div class="masthead">
   <div class="masthead-eyebrow">The Opening Edge &middot; Pre-Market Intelligence</div>
   <div class="masthead-title">THE OPENING EDGE</div>
-  <div class="masthead-sub">Thursday, May 21, 2026 &nbsp;&middot;&nbsp; Data as of 05:39 AM ET</div>
+  <div class="masthead-sub">Thursday, May 21, 2026 &nbsp;&middot;&nbsp; Data as of 06:22 AM ET</div>
 </div>
 <div class="trade-banner clear"><div class="trade-banner-title">&#10003; CLEAR WEEK &mdash; No high-impact events in next 5 days.</div></div>
 
 <div class="section-header"><h2>Market Regime &amp; Macro Backdrop</h2></div>
 <span class="regime-badge regime-bull">Bull Trend</span>
-<p style="font-size:13px;color:#c8c0b0;line-height:1.6;margin-bottom:8px;">Bull Trend — SPY, QQQ, IWM, and DIA all hold Golden Crosses and trade above their 5D, 20D, 50D, and 200D SMAs with 60% of sampled stocks above their 200D SMA, though MACD bearish crosses on all four major ETFs and softening futures warn of near-term consolidation within the uptrend.</p>
-<p style="font-size:12px;color:#9a9080;margin-bottom:6px;"><strong style="color:#c9a84c;">Intermarket:</strong> The Copper/Gold ratio at 1.3898 sends an expansion signal suggesting industrial demand is holding up, but the simultaneous surge in crude oil (WTI +2.88%, Brent +2.26%), rising yields across the curve, and a firming DXY create a stagflationary cocktail that historically pressures equity multiples — particularly in rate-sensitive sectors. The CBOE SKEW at 132.31 (moderately elevated) combined with all bond ETFs trading below their 20D SMAs signals that sophisticated players are quietly hedging tail risk even as the headline CNN Fear & Greed reads 60.8/100 (Greed), which is distinct from the News Sentiment Score of 76/100.</p>
-<p style="font-size:12px;color:#9a9080;margin-bottom:6px;"><strong style="color:#c9a84c;">Rotation:</strong> Technology (XLK +9.04% vs SPY over 20 days) is the sole clear leader while Consumer Discretionary, Healthcare, Real Estate, and Consumer Staples all lag SPY by more than 1%, and Energy's -2.43% session performance despite surging crude oil is a notable divergence — the rotation theme is narrow tech-led momentum with defensive and cyclical sectors failing to confirm breadth.</p>
+<p style="font-size:13px;color:#c8c0b0;line-height:1.6;margin-bottom:8px;">Bull Trend — SPY, QQQ, IWM, and DIA all trade above their 5D, 20D, 50D, and 200D SMAs with confirmed Golden Crosses, 60% of sample stocks above 200D SMA, and cyclicals (XLY +2.53%, XLK +2.25%) leading yesterday's broad-based rally; however, futures are pulling back modestly (-0.41% S&P, -0.60% NQ) and MACD histograms are in bearish cross territory across all major ETFs, flagging a potential short-term consolidation within the larger uptrend.</p>
+<p style="font-size:12px;color:#9a9080;margin-bottom:6px;"><strong style="color:#c9a84c;">Rotation:</strong> Cyclicals (XLY, XLK, XLB, XLI) led yesterday's rally while defensives (XLP -0.66%, XLV -0.13%) and Energy (XLE -2.43%) lagged, confirming a risk-on rotation theme — but Energy's sharp underperformance despite surging crude today is a notable divergence worth monitoring for a mean-reversion snap-back in XLE.</p>
 
 <div class="section-header"><h2>Market Pulse</h2></div>
 
 <div class="pulse-grid">
   <div class="pulse-card featured">
-    <div><div class="pulse-label">S&amp;P 500 Futures</div><div class="pulse-value">$7,426.00</div></div>
+    <div><div class="pulse-label">S&amp;P 500 Futures</div><div class="pulse-value">$7,421.25</div></div>
     <div style="text-align:right">
-      <div class="pulse-change down">-0.35%</div>
-      <div style="font-size:11px;color:#5c5448;margin-top:4px;">Futures are pulling back across the board: S&P 500 Futures at 7,426.00 (-0.35%), Nasdaq 100 Futures at 29,239.25 (-0.51%), Dow Futures at 49,937.00 (-0.31%), and Russell 2000 Futures at 2,801.50 (-0.69%), suggesting a mild risk-off open after yesterday's broad rally.</div>
+      <div class="pulse-change down">-0.41%</div>
+      <div style="font-size:11px;color:#5c5448;margin-top:4px;">Futures are soft across the board: S&P 500 Futures at 7,421.25 (-0.41%), Nasdaq 100 Futures at 29,213.00 (-0.60%), Dow Futures at 49,955.00 (-0.28%), and Russell 2000 Futures at 2,802.60 (-0.65%), suggesting a gap-down open that partially fades yesterday's strong gains.</div>
     </div>
   </div>
   <div class="pulse-card">
     <div class="pulse-label">VIX</div>
-    <div class="pulse-value">17.73</div>
-    <div class="pulse-change up">+1.66%</div>
-    <div style="font-size:10px;color:#4caf7a;margin-top:6px;line-height:1.4;">Term Structure: Normal contango (VIX9D 15.14 &lt; VIX 17.73)</div>
+    <div class="pulse-value">17.67</div>
+    <div class="pulse-change up">+1.32%</div>
+    <div style="font-size:10px;color:#4caf7a;margin-top:6px;line-height:1.4;">Term Structure: Normal contango (VIX9D 15.14 &lt; VIX 17.67)</div>
   </div>
   <div class="pulse-card">
     <div class="pulse-label">Implied 1-Day Move</div>
-    <div class="pulse-value">&#177;1.12%</div>
+    <div class="pulse-value">&#177;1.11%</div>
     <div style="font-size:11px;color:#4caf7a;margin-top:4px;">Signal: Greed</div>
   </div>
 </div>
-<p class="note" style="margin:6px 0 4px;">MACD histograms are in bearish cross territory on SPY (-1.002), QQQ (-1.090), IWM (-1.494), and DIA (-0.503) simultaneously, while RSI on QQQ (69.9) and SPY (66.5) approach overbought — a divergence warning that momentum is fading even as price holds near highs.</p>
-<p class="note" style="margin:0 0 12px;">Intermarket signals are mixed-to-cautious: DXY is firming (+0.23%), yields are rising sharply (+6 bps on 2Y and 10Y), WTI crude is surging (+2.88% to $101.09), and gold is softening (-0.52%) — a combination that points to stagflation pressure rather than clean risk-on, with the bond/equity both-rising dynamic flagging a liquidity-driven rally vulnerable to reversal.</p>
+<p class="note" style="margin:6px 0 4px;">MACD histograms are in bearish cross on SPY (-1.002), QQQ (-1.090), IWM (-1.494), and DIA (-0.503) simultaneously — a broad momentum deterioration signal even as RSIs remain in neutral territory (SPY 66.5, QQQ 69.9); QQQ's BB position at 76.3% of band range warns of mean-reversion risk near the upper band.</p>
+<p class="note" style="margin:0 0 12px;">Intermarket read is mixed-to-cautious: WTI crude surging +3.43% to $101.63 and Natural Gas +6.36% to $3.19 inject stagflation risk, while 10-year yields jumped +6 bps to 4.67% and the DXY firmed +0.274% to 99.382 — a combination that historically pressures equity multiples, especially in rate-sensitive growth names.</p>
 <div class="vix-row" style="margin-bottom:6px;">
   <div class="vix-card">
     <div class="pulse-label">CNN Fear &amp; Greed</div>
@@ -195,11 +194,11 @@ p.note { font-size: 12px; color: #5c5448; margin-top: 10px; font-style: italic; 
     <div class="sentiment-bar-wrap"><div class="sentiment-bar-fill" style="width:29.0%;background:linear-gradient(90deg,#e05a5a,#c9a84c)"></div></div>
   </div>
 </div>
-<p class="note">With VIX at 17.73 (+1.66%) — below 20 and in cheap-options territory — and SPY ATR(14) at $7.50 (1.01% of price), premium is relatively inexpensive, favoring buying premium via debit spreads or defined-risk long options structures rather than selling premium. The implied 1-day SPX move of +/-1.12% and the cluster of same-day SPY calls at $740–$741 with 7–8x volume-to-OI ratios suggest dealer hedging rather than directional conviction, making debit call spreads or debit put spreads the preferred vehicle depending on directional bias.</p>
+<p class="note">With VIX at 17.67 (+1.32%) implying a 1-day SPX move of +/-1.11% and SPY ATR(14) at $7.50 (1.01% of price), options are relatively cheap by VIX standards (VIX < 20 signals inexpensive premium) — the preferred approach is to BUY premium via debit spreads or long options rather than selling premium. SPY HV Rank at 12.9 (well below 25) reinforces the buy-premium bias. Today's same-day expiry (0DTE) pin dynamics around the $740 max pain level may limit intraday range, but the low-VIX environment favors defined-risk debit structures over credit strategies.</p>
 
 <div class="section-header"><h2>Key Price Levels &#127919;</h2></div>
-<div style="background:#111009;border:1px solid #2a2620;border-radius:4px;padding:0 16px;"><div class="key-level-row"><div class="key-level-label">SPY Support</div><div class="key-level-price">$740.19</div><div class="key-level-sig">5D SMA at $740.19 — the first dynamic support below spot ($741.25); a close below this level would be the first 5D SMA breach since the recent rally leg and would confirm MACD bearish cross follow-through</div></div>
-<div class="key-level-row"><div class="key-level-label">SPX Resistance</div><div class="key-level-price">$7,500 / SPY $749.53</div><div class="key-level-sig">SPY 52-week high at $749.53 represents the nearest overhead resistance and breakout trigger; a sustained move above this level would signal trend continuation and likely accelerate momentum buying.</div></div>
+<div style="background:#111009;border:1px solid #2a2620;border-radius:4px;padding:0 16px;"><div class="key-level-row"><div class="key-level-label">SPY Support</div><div class="key-level-price">$740.19</div><div class="key-level-sig">5D SMA at $740.19 coincides precisely with today's max pain strike at $740 (exp 2026-05-21) and the $740 PUT wall (Vol 40,833 / OI 5,591), making this a high-conviction magnet level for today's session</div></div>
+<div class="key-level-row"><div class="key-level-label">SPY Resistance</div><div class="key-level-price">$749.53</div><div class="key-level-sig">52-week high at $749.53 is the only remaining technical ceiling above current price; a break above this level on volume would signal a breakout to all-time highs with no overhead resistance</div></div>
 </div>
 
 <div class="section-header"><h2>Previous Session Recap</h2></div>
@@ -214,10 +213,10 @@ p.note { font-size: 12px; color: #5c5448; margin-top: 10px; font-style: italic; 
 <div class="section-header"><h2>Global Markets Overnight &#127758;</h2></div>
 <table class="markets-table"><thead><tr><th>Index</th><th>Close</th><th>Change</th></tr></thead><tbody><tr><td>Nikkei 225</td><td>$61,684.14</td><td class="up">+3.14%</td></tr>
 <tr><td>Hang Seng</td><td>$25,386.52</td><td class="down">-1.03%</td></tr>
-<tr><td>DAX</td><td>$24,557.77</td><td class="down">-0.73%</td></tr>
-<tr><td>FTSE 100</td><td>$10,391.71</td><td class="down">-0.39%</td></tr>
-<tr><td>CAC 40</td><td>$8,066.14</td><td class="down">-0.63%</td></tr>
-<tr><td>Euro Stoxx 50</td><td>$5,937.14</td><td class="down">-0.65%</td></tr>
+<tr><td>DAX</td><td>$24,611.48</td><td class="down">-0.51%</td></tr>
+<tr><td>FTSE 100</td><td>$10,407.96</td><td class="down">-0.23%</td></tr>
+<tr><td>CAC 40</td><td>$8,079.60</td><td class="down">-0.47%</td></tr>
+<tr><td>Euro Stoxx 50</td><td>$5,949.69</td><td class="down">-0.44%</td></tr>
 </tbody></table>
 
 <div class="section-header"><h2>Sector Heatmap &amp; Rotation</h2></div>
@@ -251,36 +250,36 @@ p.note { font-size: 12px; color: #5c5448; margin-top: 10px; font-style: italic; 
 <p class="note">20-day return vs SPY. Leading sectors define rotation theme.</p>
 
 <div class="section-header"><h2>Commodities &amp; Crypto</h2></div>
-<table class="asset-table"><thead><tr><th>Asset</th><th>Price</th><th>24h Chg</th><th>Signal</th></tr></thead><tbody><tr><td>Gold</td><td>$4,507.80</td><td class="down">-0.52%</td><td><span class="signal-bear">Bearish</span></td></tr>
-<tr><td>Silver</td><td>$75.11</td><td class="down">-0.98%</td><td><span class="signal-bear">Bearish</span></td></tr>
-<tr><td>WTI Crude</td><td>$101.09</td><td class="up">+2.88%</td><td><span class="signal-bull">Bullish</span></td></tr>
-<tr><td>Brent Crude</td><td>$107.39</td><td class="up">+2.26%</td><td><span class="signal-bull">Bullish</span></td></tr>
-<tr><td>Natural Gas</td><td>$3.15</td><td class="up">+4.79%</td><td><span class="signal-bull">Bullish</span></td></tr>
-<tr><td>Copper</td><td>$6.26</td><td class="down">-0.41%</td><td><span class="signal-bear">Bearish</span></td></tr>
-<tr><td>Bitcoin (BTC)</td><td>$77,209.00</td><td class="down">-0.32%</td><td><span class="signal-bear">Bearish</span></td></tr>
-<tr><td>Ethereum (ETH)</td><td>$2,116.21</td><td class="down">-0.67%</td><td><span class="signal-bear">Bearish</span></td></tr>
-<tr><td>Solana (SOL)</td><td>$85.65</td><td class="up">+0.89%</td><td><span class="signal-bull">Bullish</span></td></tr>
-<tr><td>Dogecoin (DOGE)</td><td>$0.10</td><td class="up">+0.64%</td><td><span class="signal-bull">Bullish</span></td></tr>
+<table class="asset-table"><thead><tr><th>Asset</th><th>Price</th><th>24h Chg</th><th>Signal</th></tr></thead><tbody><tr><td>Gold</td><td>$4,504.90</td><td class="down">-0.58%</td><td><span class="signal-bear">Bearish</span></td></tr>
+<tr><td>Silver</td><td>$75.16</td><td class="down">-0.91%</td><td><span class="signal-bear">Bearish</span></td></tr>
+<tr><td>WTI Crude</td><td>$101.63</td><td class="up">+3.43%</td><td><span class="signal-bull">Bullish</span></td></tr>
+<tr><td>Brent Crude</td><td>$107.94</td><td class="up">+2.78%</td><td><span class="signal-bull">Bullish</span></td></tr>
+<tr><td>Natural Gas</td><td>$3.19</td><td class="up">+6.36%</td><td><span class="signal-bull">Bullish</span></td></tr>
+<tr><td>Copper</td><td>$6.26</td><td class="down">-0.49%</td><td><span class="signal-bear">Bearish</span></td></tr>
+<tr><td>Bitcoin (BTC)</td><td>$77,173.00</td><td class="down">-0.31%</td><td><span class="signal-bear">Bearish</span></td></tr>
+<tr><td>Ethereum (ETH)</td><td>$2,114.64</td><td class="down">-0.68%</td><td><span class="signal-bear">Bearish</span></td></tr>
+<tr><td>Solana (SOL)</td><td>$85.86</td><td class="up">+1.17%</td><td><span class="signal-bull">Bullish</span></td></tr>
+<tr><td>Dogecoin (DOGE)</td><td>$0.10</td><td class="up">+0.54%</td><td><span class="signal-bull">Bullish</span></td></tr>
 </tbody></table>
 
 <div class="section-header"><h2>Forex &amp; Dollar Index</h2></div>
-<div class="forex-grid"><div class="forex-card"><div class="forex-name">DXY (Dollar Index)</div><div class="forex-price">99.338</div><div class="forex-pct up">+0.23%</div></div>
-<div class="forex-card"><div class="forex-name">EUR/USD</div><div class="forex-price">1.1606</div><div class="forex-pct down">-0.01%</div></div>
-<div class="forex-card"><div class="forex-name">USD/JPY</div><div class="forex-price">159.035</div><div class="forex-pct up">+0.06%</div></div>
-<div class="forex-card"><div class="forex-name">GBP/USD</div><div class="forex-price">1.3422</div><div class="forex-pct up">+0.20%</div></div>
-<div class="forex-card"><div class="forex-name">USD/CAD</div><div class="forex-price">1.3772</div><div class="forex-pct up">+0.18%</div></div>
-<div class="forex-card"><div class="forex-name">AUD/USD</div><div class="forex-price">0.7133</div><div class="forex-pct up">+0.37%</div></div>
+<div class="forex-grid"><div class="forex-card"><div class="forex-name">DXY (Dollar Index)</div><div class="forex-price">99.382</div><div class="forex-pct up">+0.27%</div></div>
+<div class="forex-card"><div class="forex-name">EUR/USD</div><div class="forex-price">1.1596</div><div class="forex-pct down">-0.10%</div></div>
+<div class="forex-card"><div class="forex-name">USD/JPY</div><div class="forex-price">159.212</div><div class="forex-pct up">+0.11%</div></div>
+<div class="forex-card"><div class="forex-name">GBP/USD</div><div class="forex-price">1.341</div><div class="forex-pct up">+0.10%</div></div>
+<div class="forex-card"><div class="forex-name">USD/CAD</div><div class="forex-price">1.3781</div><div class="forex-pct up">+0.25%</div></div>
+<div class="forex-card"><div class="forex-name">AUD/USD</div><div class="forex-price">0.7126</div><div class="forex-pct up">+0.27%</div></div>
 </div>
 
 
 <div class="section-header"><h2>Intermarket Ratios &amp; Breadth</h2></div>
-<div style="background:#111009;border:1px solid #2a2620;border-radius:4px;padding:0 16px;"><div class="ratio-row"><div><div class="ratio-key">Copper / Gold Ratio</div></div><div class="ratio-val">1.3898</div><div class="ratio-sig">Expansion signal — industrial demand outpacing inflation</div></div>
-<div class="ratio-row"><div><div class="ratio-key">Oil / Gold Ratio</div></div><div class="ratio-val">44.59</div><div class="ratio-sig">High — oil cheap relative to gold, risk-off bias</div></div>
-<div class="ratio-row"><div><div class="ratio-key">Gold / Silver Ratio</div></div><div class="ratio-val">60.0</div><div class="ratio-sig">Normal ratio</div></div>
-<div class="ratio-row"><div><div class="ratio-key">CBOE SKEW Index</div></div><div class="ratio-val">132.31</div><div class="ratio-sig">Moderately elevated</div></div>
-<div class="ratio-row" style="border-bottom:none;"><div><div class="ratio-key">SPY Max Pain (exp 2026-05-21)</div></div><div class="ratio-val">$758</div><div class="ratio-sig" style="color:#4caf7a;">SPY is -2.21% from max pain</div></div>
+<div style="background:#111009;border:1px solid #2a2620;border-radius:4px;padding:0 16px;"><div class="ratio-row"><div class="ratio-key">Copper / Gold Ratio</div><div class="ratio-val">1.3895</div><div class="ratio-sig">Expansion signal — industrial demand outpacing inflation</div></div>
+<div class="ratio-row"><div class="ratio-key">Oil / Gold Ratio</div><div class="ratio-val">44.33</div><div class="ratio-sig">High — oil cheap relative to gold, risk-off bias</div></div>
+<div class="ratio-row"><div class="ratio-key">Gold / Silver Ratio</div><div class="ratio-val">59.9</div><div class="ratio-sig">Normal ratio</div></div>
+<div class="ratio-row"><div class="ratio-key">CBOE SKEW Index</div><div class="ratio-val">132.31</div><div class="ratio-sig">Moderately elevated</div></div>
+<div class="ratio-row" style="border-bottom:none;"><div class="ratio-key">SPY Max Pain (exp 2026-05-21)</div><div class="ratio-val">$740</div><div class="ratio-sig" style="color:#c9a84c;">SPY is +0.17% from max pain</div></div>
 </div>
-<p class="note" style="margin-top:10px;">The Copper/Gold ratio at 1.3898 sends an expansion signal suggesting industrial demand is holding up, but the simultaneous surge in crude oil (WTI +2.88%, Brent +2.26%), rising yields across the curve, and a firming DXY create a stagflationary cocktail that historically pressures equity multiples — particularly in rate-sensitive sectors. The CBOE SKEW at 132.31 (moderately elevated) combined with all bond ETFs trading below their 20D SMAs signals that sophisticated players are quietly hedging tail risk even as the headline CNN Fear & Greed reads 60.8/100 (Greed), which is distinct from the News Sentiment Score of 76/100.</p>
+<p class="note" style="margin-top:10px;">The Copper/Gold ratio at 1.3895 sends a pro-growth expansion signal, but this is contradicted by the Oil/Gold ratio at 44.33 (oil cheap relative to gold) and surging crude/nat gas prices alongside rising yields and a firming dollar — a classic stagflation cocktail that pressures the Fed's optionality and compresses P/E multiples. The CBOE SKEW at 132.31 (moderately elevated) combined with all bond ETFs sitting below their 20D SMAs suggests institutional players are quietly hedging tail risk even as the equity surface remains constructive.</p>
 
 <div class="section-header"><h2>Yields &amp; Rates</h2></div>
 <div class="yields-row"><div class="yield-card"><div class="yield-label">2-Year</div><div class="yield-rate">4.13%</div><div class="yield-bps" style="color:#e05a5a;">+6.0 bps</div></div><div class="yield-card"><div class="yield-label">10-Year</div><div class="yield-rate">4.67%</div><div class="yield-bps" style="color:#e05a5a;">+6.0 bps</div></div><div class="yield-card"><div class="yield-label">30-Year</div><div class="yield-rate">5.18%</div><div class="yield-bps" style="color:#e05a5a;">+4.0 bps</div></div></div>
@@ -315,25 +314,25 @@ p.note { font-size: 12px; color: #5c5448; margin-top: 10px; font-style: italic; 
 <div class="section-header"><h2>Unusual Options Activity</h2></div>
 <div style="background:#111009;border:1px solid #2a2620;border-radius:4px;padding:0 16px;"><div class="options-row"><div><div class="opt-ticker">SPY CALL $740</div><div class="opt-detail">Exp 2026-05-21</div></div><div><div class="opt-vol">Vol 68,553 / OI 9,296</div><div class="opt-mult">7.4x &nbsp;<span class="signal-bull">BULLISH</span></div></div></div>
 <div class="options-row"><div><div class="opt-ticker">SPY CALL $741</div><div class="opt-detail">Exp 2026-05-21</div></div><div><div class="opt-vol">Vol 53,529 / OI 6,704</div><div class="opt-mult">8.0x &nbsp;<span class="signal-bull">BULLISH</span></div></div></div>
+<div class="options-row"><div><div class="opt-ticker">SPY PUT $740</div><div class="opt-detail">Exp 2026-05-21</div></div><div><div class="opt-vol">Vol 40,833 / OI 5,591</div><div class="opt-mult">7.3x &nbsp;<span class="signal-bear">BEARISH</span></div></div></div>
+<div class="options-row"><div><div class="opt-ticker">SPY PUT $735</div><div class="opt-detail">Exp 2026-05-21</div></div><div><div class="opt-vol">Vol 30,073 / OI 4,839</div><div class="opt-mult">6.2x &nbsp;<span class="signal-bear">BEARISH</span></div></div></div>
 <div class="options-row"><div><div class="opt-ticker">QQQ CALL $710</div><div class="opt-detail">Exp 2026-05-21</div></div><div><div class="opt-vol">Vol 28,540 / OI 4,430</div><div class="opt-mult">6.4x &nbsp;<span class="signal-bull">BULLISH</span></div></div></div>
 <div class="options-row"><div><div class="opt-ticker">QQQ CALL $712</div><div class="opt-detail">Exp 2026-05-21</div></div><div><div class="opt-vol">Vol 19,579 / OI 2,033</div><div class="opt-mult">9.6x &nbsp;<span class="signal-bull">BULLISH</span></div></div></div>
-<div class="options-row"><div><div class="opt-ticker">AAPL CALL $302</div><div class="opt-detail">Exp 2026-05-22</div></div><div><div class="opt-vol">Vol 42,038 / OI 13,050</div><div class="opt-mult">3.2x &nbsp;<span class="signal-bull">BULLISH</span></div></div></div>
-<div class="options-row"><div><div class="opt-ticker">AAPL CALL $305</div><div class="opt-detail">Exp 2026-05-22</div></div><div><div class="opt-vol">Vol 36,899 / OI 11,723</div><div class="opt-mult">3.1x &nbsp;<span class="signal-bull">BULLISH</span></div></div></div>
-<div class="options-row"><div><div class="opt-ticker">AAPL PUT $300</div><div class="opt-detail">Exp 2026-05-22</div></div><div><div class="opt-vol">Vol 18,042 / OI 5,943</div><div class="opt-mult">3.0x &nbsp;<span class="signal-bear">BEARISH</span></div></div></div>
-<div class="options-row"><div><div class="opt-ticker">AAPL PUT $298</div><div class="opt-detail">Exp 2026-05-22</div></div><div><div class="opt-vol">Vol 16,532 / OI 4,802</div><div class="opt-mult">3.4x &nbsp;<span class="signal-bear">BEARISH</span></div></div></div>
+<div class="options-row"><div><div class="opt-ticker">QQQ PUT $700</div><div class="opt-detail">Exp 2026-05-21</div></div><div><div class="opt-vol">Vol 23,387 / OI 12,257</div><div class="opt-mult">1.9x &nbsp;<span class="signal-bear">BEARISH</span></div></div></div>
+<div class="options-row"><div><div class="opt-ticker">QQQ PUT $705</div><div class="opt-detail">Exp 2026-05-21</div></div><div><div class="opt-vol">Vol 21,299 / OI 7,601</div><div class="opt-mult">2.8x &nbsp;<span class="signal-bear">BEARISH</span></div></div></div>
 </div>
-<p class="note">The heavy same-day SPY call flow at $740–$741 (7.4x–8.0x vol/OI) alongside elevated SKEW at 132.31 and AAPL two-sided flow (calls at $302–$305 vs puts at $298–$300 expiring tomorrow) suggests smart money is pinning the tape near current levels into today's expiry while simultaneously buying downside protection on individual names, consistent with a dealer-hedged, max-pain-gravitating close rather than a directional breakout. The SPY Put/Call Ratio of 0.82 confirms call skew and bullish sentiment in the options market.</p>
+<p class="note">Heavy same-day call volume on SPY $740 (7.4x OI) and $741 (8.0x OI) alongside elevated put buying at $740/$735 suggests dealers are pinning near max pain at $740 into today's expiry, while the elevated SKEW at 132.31 confirms institutional tail hedging — net positioning reads as 'controlled greed with a hedge,' not a clean directional bet.</p>
 
 <div class="section-header"><h2>Social Media Momentum &#128241;</h2></div>
-<div style="margin-bottom:12px;"><div style="font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:#5c5448;margin-bottom:6px;">StockTwits Trending</div><div class="chips"><span class="chip">NIO</span><span class="chip">INFQ</span><span class="chip hot">NVDA</span><span class="chip">IONQ</span><span class="chip">RGTI</span><span class="chip">QBTS</span><span class="chip">IBM</span><span class="chip">WMT</span><span class="chip">INTU</span><span class="chip">CRML</span><span class="chip">BULL</span><span class="chip">ELF</span></div></div><div style="margin-bottom:12px;"><div style="font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:#5c5448;margin-bottom:6px;">Reddit Most Mentioned</div><div class="chips"><span class="chip">$NVDA</span><span class="chip">$MU</span><span class="chip">$WSJ</span><span class="chip">$BOXX</span><span class="chip">$PE</span><span class="chip">$TIPS</span><span class="chip">$BXDC</span><span class="chip">$IRA</span></div></div><p class="note">Cross-platform overlap: <strong style="color:#c9a84c;">NVDA</strong></p>
+<div style="margin-bottom:12px;"><div style="font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:#5c5448;margin-bottom:6px;">StockTwits Trending</div><div class="chips"><span class="chip">NIO</span><span class="chip hot">NVDA</span><span class="chip">INFQ</span><span class="chip">MSFT</span><span class="chip">IONQ</span><span class="chip">RGTI</span><span class="chip">INTU</span><span class="chip">WMT</span><span class="chip">IBM</span><span class="chip">ELF</span><span class="chip">GFS</span><span class="chip">QBTS</span></div></div><div style="margin-bottom:12px;"><div style="font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:#5c5448;margin-bottom:6px;">Reddit Most Mentioned</div><div class="chips"><span class="chip">$NVDA</span><span class="chip">$MU</span><span class="chip">$WSJ</span><span class="chip">$BOXX</span><span class="chip">$PE</span><span class="chip">$TIPS</span><span class="chip">$BXDC</span><span class="chip">$IRA</span></div></div><p class="note">Cross-platform overlap: <strong style="color:#c9a84c;">NVDA</strong></p>
 
 <div class="section-header"><h2>News &amp; Catalyst Briefing</h2></div>
 <div style="background:#111009;border:1px solid #2a2620;border-radius:4px;padding:0 16px;"><div class="news-item"><div class="news-headline">Retail investors get direct access to SpaceX IPO through major brokerage platforms</div><div class="news-body">Market headline — see broker or news source for full context.</div></div><div class="news-item"><div class="news-headline">Stocks making the biggest moves premarket: IBM, Walmart, Rocket Lab, Nvidia & more</div><div class="news-body">Market headline — see broker or news source for full context.</div></div><div class="news-item"><div class="news-headline">Japan’s megabanks post record profits, but analysts warn growth may slow as risks mount</div><div class="news-body">Market headline — see broker or news source for full context.</div></div><div class="news-item"><div class="news-headline">Stocks making the biggest moves after hours: Nvidia, Intuit, E.l.f. Beauty and more</div><div class="news-body">Market headline — see broker or news source for full context.</div></div><div class="news-item"><div class="news-headline">OpenAI takes the lead in AI IPO horse race: 'Getting to public markets first is very important'</div><div class="news-body">Market headline — see broker or news source for full context.</div></div></div>
 
 <div class="section-header"><h2>Sentiment Analysis</h2></div>
-<div class="pulse-card" style="margin-bottom:12px;"><div class="pulse-label">News Sentiment (based on 50 articles)</div><div style="font-family:'DM Mono',monospace;font-size:22px;color:#f0ead8;margin:4px 0;">76/100 — <span style="color:#4caf7a;">Strongly Bullish</span></div><div class="sentiment-bar-wrap"><div class="sentiment-bar-fill" style="width:76%"></div></div></div>
-<p style="font-size:13px;color:#c8c0b0;margin-bottom:6px;">Bullish Tickers: <strong style="color:#4caf7a;">ORCL</strong>, <strong style="color:#4caf7a;">LDOS</strong>, <strong style="color:#4caf7a;">VZ</strong>, <strong style="color:#4caf7a;">EOG</strong>, <strong style="color:#4caf7a;">CSCO</strong></p>
-<p style="font-size:13px;color:#c8c0b0;margin-bottom:6px;">Bearish Tickers: <strong style="color:#e05a5a;">AVB</strong></p>
+<div class="pulse-card" style="margin-bottom:12px;"><div class="pulse-label">News Sentiment (based on 50 articles)</div><div style="font-family:'DM Mono',monospace;font-size:22px;color:#f0ead8;margin:4px 0;">79/100 — <span style="color:#4caf7a;">Strongly Bullish</span></div><div class="sentiment-bar-wrap"><div class="sentiment-bar-fill" style="width:79%"></div></div></div>
+<p style="font-size:13px;color:#c8c0b0;margin-bottom:6px;">Bullish Tickers: <strong style="color:#4caf7a;">TGL</strong>, <strong style="color:#4caf7a;">FIS</strong>, <strong style="color:#4caf7a;">ORCL</strong>, <strong style="color:#4caf7a;">NRG</strong>, <strong style="color:#4caf7a;">DAL</strong></p>
+<p style="font-size:13px;color:#c8c0b0;margin-bottom:6px;">Bearish Tickers: None identified</p>
 <p class="note"></p>
 
 <div class="section-header"><h2>Upcoming Earnings &#128197;</h2></div>
