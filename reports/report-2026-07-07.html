@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>The Opening Edge – Tuesday, July 07, 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'DM Sans', -apple-system, Arial, sans-serif; background: #0a0a0a; color: #e8e4d9; max-width: 700px; margin: 0 auto; padding: 40px 24px 80px; font-size: 15px; line-height: 1.65; }
+.masthead { text-align: center; padding: 32px 0 28px; border-top: 1px solid #c9a84c; border-bottom: 1px solid #c9a84c; margin-bottom: 0; }
+.masthead-eyebrow { font-size: 10px; font-weight: 600; letter-spacing: 0.25em; color: #c9a84c; text-transform: uppercase; margin-bottom: 10px; }
+.masthead-title { font-family: 'Playfair Display', Georgia, serif; font-size: 34px; font-weight: 700; color: #f0ead8; line-height: 1.2; margin-bottom: 8px; }
+.masthead-sub { font-size: 12px; color: #7a7060; letter-spacing: 0.1em; }
+/* ── Hero summary banner ── */
+.hero-banner { padding: 18px 24px; margin-bottom: 40px; }
+.hero-banner.risk-on  { background: linear-gradient(135deg, #061810 0%, #0b2218 100%); border: 1px solid #1d4030; border-top: none; }
+.hero-banner.risk-off { background: linear-gradient(135deg, #180606 0%, #220e0e 100%); border: 1px solid #3d1818; border-top: none; }
+.hero-banner.neutral  { background: linear-gradient(135deg, #141000 0%, #1e1800 100%); border: 1px solid #3d3010; border-top: none; }
+.hero-narrative { font-size: 13px; color: #c8c0b0; line-height: 1.65; letter-spacing: 0.01em; margin-bottom: 12px; }
+.hero-futures { display: flex; gap: 20px; flex-wrap: wrap; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.06); }
+.hero-future-item { font-size: 11px; font-family: 'DM Mono', monospace; }
+.hero-banner.risk-on  .hero-future-item .fut-pct { color: #4ade80; }
+.hero-banner.risk-off .hero-future-item .fut-pct { color: #f87171; }
+.hero-banner.neutral  .hero-future-item .fut-pct { color: #c9a84c; }
+.hero-future-item .fut-name { color: #5c5448; margin-right: 5px; }
+/* ── Section headers ── */
+.section-header { display: flex; align-items: center; gap: 10px; margin: 36px 0 16px; }
+.section-header h2 { font-size: 10px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: #c9a84c; white-space: nowrap; }
+.section-header::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, #3a3020 0%, #1a1814 100%); }
+/* ── Pulse / metric cards ── */
+.pulse-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 16px; }
+.pulse-card { background: #111009; border: 1px solid #2a2620; border-radius: 4px; padding: 14px 16px; }
+.pulse-card.featured { border-color: #c9a84c; grid-column: span 2; display: flex; justify-content: space-between; align-items: center; background: linear-gradient(135deg, #141008 0%, #111009 100%); }
+.pulse-label { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #5c5448; margin-bottom: 4px; }
+.pulse-value { font-family: 'DM Mono', monospace; font-size: 22px; font-weight: 500; color: #f0ead8; }
+.pulse-change { font-family: 'DM Mono', monospace; font-size: 13px; font-weight: 500; margin-top: 2px; }
+.pulse-change.up { color: #4ade80; }
+.pulse-change.down { color: #f87171; }
+/* ── Color tokens ── */
+.up { color: #4ade80 !important; }
+.down { color: #f87171 !important; }
+.neutral { color: #7a7060 !important; }
+/* ── Index / markets tables ── */
+.markets-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.markets-table th { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #5c5448; text-align: left; padding: 7px 8px; border-bottom: 1px solid #2a2620; }
+.markets-table th:not(:first-child) { text-align: right; }
+.markets-table td { padding: 9px 8px; border-bottom: 1px solid #1a1814; color: #c8c0b0; }
+.markets-table td:not(:first-child) { text-align: right; font-family: 'DM Mono', monospace; }
+.markets-table td:first-child { font-weight: 500; color: #e8e4d9; }
+.markets-table tbody tr:nth-child(even) td { background: #0d0c08; }
+/* ── Sector heatmap bars ── */
+.sector-heatmap-list { display: flex; flex-direction: column; gap: 5px; margin-bottom: 4px; }
+.sector-hm-row { display: flex; align-items: center; gap: 8px; height: 28px; }
+.sector-hm-name { font-size: 11px; color: #9a9080; width: 130px; flex-shrink: 0; text-align: right; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.sector-hm-track { flex: 1; height: 22px; background: #111009; border-radius: 3px; position: relative; overflow: hidden; border: 1px solid #1e1c16; }
+.sector-hm-fill { height: 100%; border-radius: 2px; position: absolute; top: 0; display: flex; align-items: center; min-width: 4px; transition: width 0.3s ease; }
+.sector-hm-fill.pos { background: linear-gradient(90deg, #14301e 0%, #1a5c30 100%); left: 50%; }
+.sector-hm-fill.neg { background: linear-gradient(90deg, #5c1414 0%, #2e0e0e 100%); right: 50%; }
+.sector-hm-label { position: absolute; top: 0; left: 0; right: 0; height: 100%; display: flex; align-items: center; padding: 0 8px; font-family: 'DM Mono', monospace; font-size: 11px; font-weight: 600; }
+.sector-hm-fill.pos .sector-hm-label { justify-content: flex-start; color: #4ade80; }
+.sector-hm-fill.neg .sector-hm-label { justify-content: flex-end; color: #f87171; }
+/* Legacy sector grid kept for RS section */
+.sector-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+.sector-bar { background: #111009; border: 1px solid #2a2620; border-radius: 3px; padding: 8px 10px; display: flex; justify-content: space-between; align-items: center; font-size: 12px; }
+.sector-name { color: #9a9080; }
+.sector-pct { font-family: 'DM Mono', monospace; font-weight: 500; }
+/* ── Asset / commodity tables ── */
+.asset-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.asset-table th { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #5c5448; text-align: right; padding: 7px 8px; border-bottom: 1px solid #2a2620; }
+.asset-table th:first-child { text-align: left; }
+.asset-table td { padding: 9px 8px; border-bottom: 1px solid #1a1814; text-align: right; font-family: 'DM Mono', monospace; color: #c8c0b0; }
+.asset-table td:first-child { text-align: left; font-family: 'DM Sans', Arial, sans-serif; font-weight: 500; color: #e8e4d9; }
+.asset-table tbody tr:nth-child(even) td { background: #0d0c08; }
+.signal-bull { display: inline-block; background: #0d2016; color: #4ade80; font-size: 10px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; padding: 2px 7px; border-radius: 2px; border: 1px solid #1d4030; }
+.signal-bear { display: inline-block; background: #200d0d; color: #f87171; font-size: 10px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; padding: 2px 7px; border-radius: 2px; border: 1px solid #3d1818; }
+.signal-neutral { display: inline-block; background: #1a1710; color: #c9a84c; font-size: 10px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; padding: 2px 7px; border-radius: 2px; border: 1px solid #3a3010; }
+.yields-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 4px; }
+.yield-card { background: #111009; border: 1px solid #2a2620; border-radius: 4px; padding: 12px 14px; text-align: center; }
+.yield-label { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #5c5448; margin-bottom: 4px; }
+.yield-rate { font-family: 'DM Mono', monospace; font-size: 20px; font-weight: 500; color: #c9a84c; }
+.yield-bps { font-size: 11px; margin-top: 2px; font-family: 'DM Mono', monospace; }
+.tech-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.tech-table th { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #5c5448; text-align: right; padding: 7px 8px; border-bottom: 1px solid #2a2620; }
+.tech-table th:first-child { text-align: left; }
+.tech-table td { padding: 9px 8px; border-bottom: 1px solid #1a1814; text-align: right; font-family: 'DM Mono', monospace; color: #c8c0b0; font-size: 12px; }
+.tech-table td:first-child { text-align: left; font-family: 'DM Sans', Arial, sans-serif; font-weight: 600; color: #f0ead8; font-size: 14px; }
+.tech-table tbody tr:nth-child(even) td { background: #0d0c08; }
+.golden-cross { display: inline-block; background: #1f1800; color: #c9a84c; font-size: 10px; font-weight: 600; text-transform: uppercase; padding: 2px 7px; border-radius: 2px; border: 1px solid #3d3010; }
+.death-cross { display: inline-block; background: #200d0d; color: #f87171; font-size: 10px; font-weight: 600; text-transform: uppercase; padding: 2px 7px; border-radius: 2px; border: 1px solid #3d1818; }
+.options-row { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid #1a1814; font-size: 13px; }
+.options-row:last-child { border-bottom: none; }
+.opt-ticker { font-weight: 600; color: #f0ead8; }
+.opt-detail { font-size: 11px; color: #7a7060; margin-top: 2px; }
+.opt-vol { font-family: 'DM Mono', monospace; color: #c8c0b0; text-align: right; }
+.opt-mult { font-size: 11px; color: #f87171; margin-top: 2px; text-align: right; }
+.scenarios { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.scenario-card { border-radius: 4px; padding: 16px; border: 1px solid; }
+.scenario-card.bull { background: #0b1a10; border-color: #1d4030; }
+.scenario-card.base { background: #111009; border-color: #2a2620; }
+.scenario-card.bear { background: #1a0b0b; border-color: #3d1818; }
+.scenario-label { font-size: 9px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 6px; }
+.scenario-label.bull { color: #4ade80; }
+.scenario-label.base { color: #c9a84c; }
+.scenario-label.bear { color: #f87171; }
+.scenario-target { font-family: 'DM Mono', monospace; font-size: 20px; font-weight: 500; color: #f0ead8; margin-bottom: 4px; }
+.scenario-desc { font-size: 11px; color: #7a7060; line-height: 1.5; }
+.news-item { padding: 14px 0; border-bottom: 1px solid #1a1814; }
+.news-item:last-child { border-bottom: none; }
+.news-headline { font-size: 14px; font-weight: 500; color: #e8e4d9; margin-bottom: 4px; line-height: 1.4; }
+.news-body { font-size: 12px; color: #7a7060; line-height: 1.55; }
+.edge-box { background: #111009; border: 1px solid #c9a84c; border-radius: 4px; padding: 24px; margin-top: 8px; }
+.edge-box-title { font-family: 'Playfair Display', Georgia, serif; font-size: 18px; color: #c9a84c; margin-bottom: 16px; }
+.edge-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #2a2620; font-size: 13px; }
+.edge-row:last-child { border-bottom: none; }
+.edge-key { color: #7a7060; }
+.edge-val { color: #f0ead8; font-weight: 500; }
+.edge-val.bull { color: #4ade80; }
+.edge-val.warn { color: #f87171; }
+.earn-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.earn-table th { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #5c5448; text-align: left; padding: 7px 8px; border-bottom: 1px solid #2a2620; }
+.earn-table th:last-child { text-align: right; }
+.earn-table td { padding: 9px 8px; border-bottom: 1px solid #1a1814; color: #c8c0b0; }
+.earn-table td:first-child { font-weight: 600; color: #f0ead8; width: 60px; }
+.earn-table td:last-child { text-align: right; font-family: 'DM Mono', monospace; color: #c9a84c; }
+.earn-table tbody tr:nth-child(even) td { background: #0d0c08; }
+.sentiment-bar-wrap { background: #1a1814; border-radius: 2px; height: 6px; overflow: hidden; margin-top: 8px; margin-bottom: 4px; }
+.sentiment-bar-fill { height: 100%; border-radius: 2px; background: linear-gradient(90deg, #4ade80, #c9a84c); }
+.vix-row { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+.vix-card { background: #111009; border: 1px solid #2a2620; border-radius: 4px; padding: 12px 14px; }
+/* ── Ticker chips ── */
+.chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+.chip { display: inline-block; background: #1a1814; border: 1px solid #2a2620; border-radius: 3px; padding: 4px 10px; font-size: 11px; font-weight: 600; color: #9a9080; font-family: 'DM Mono', monospace; letter-spacing: 0.05em; white-space: nowrap; }
+.chip.hot { color: #c9a84c; border-color: #3d3010; background: #1a1400; }
+p.note { font-size: 12px; color: #5c5448; margin-top: 10px; font-style: italic; }
+.disclaimer { margin-top: 48px; padding-top: 20px; border-top: 1px solid #2a2620; font-size: 10px; color: #3d3830; text-align: center; line-height: 1.7; letter-spacing: 0.03em; }
+.regime-badge { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; padding: 4px 12px; border-radius: 2px; margin-bottom: 12px; }
+.regime-bull { background: #0b1a10; color: #4ade80; border: 1px solid #1d4030; }
+.regime-bear { background: #1a0b0b; color: #f87171; border: 1px solid #3d1818; }
+.regime-transition { background: #1a1400; color: #c9a84c; border: 1px solid #3d3010; }
+.key-level-row { display: flex; justify-content: space-between; align-items: flex-start; padding: 10px 0; border-bottom: 1px solid #1a1814; gap: 16px; }
+.key-level-row:last-child { border-bottom: none; }
+.key-level-label { font-size: 12px; font-weight: 600; color: #c9a84c; min-width: 120px; }
+.key-level-price { font-family: 'DM Mono', monospace; font-size: 16px; color: #f0ead8; min-width: 80px; text-align: right; }
+.key-level-sig { font-size: 11px; color: #7a7060; line-height: 1.5; flex: 1; text-align: right; }
+.tech-indicator-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.tech-ind-card { background: #111009; border: 1px solid #2a2620; border-radius: 3px; padding: 10px 12px; }
+.tech-ind-sym { font-size: 13px; font-weight: 600; color: #f0ead8; margin-bottom: 6px; }
+.tech-ind-row { display: flex; justify-content: space-between; font-size: 11px; margin-bottom: 3px; }
+.tech-ind-key { color: #5c5448; }
+.tech-ind-val { font-family: 'DM Mono', monospace; color: #c8c0b0; }
+.forex-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.forex-card { background: #111009; border: 1px solid #2a2620; border-radius: 3px; padding: 10px 12px; }
+.forex-name { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #5c5448; margin-bottom: 4px; }
+.forex-price { font-family: 'DM Mono', monospace; font-size: 16px; color: #f0ead8; }
+.forex-pct { font-family: 'DM Mono', monospace; font-size: 11px; margin-top: 2px; }
+.ratio-row { display: grid; grid-template-columns: 2fr 1fr 2fr; align-items: center; padding: 9px 0; border-bottom: 1px solid #1a1814; font-size: 12px; gap: 8px; }
+.ratio-row:last-child { border-bottom: none; }
+.ratio-key { color: #9a9080; }
+.ratio-val { font-family: 'DM Mono', monospace; color: #f0ead8; font-weight: 500; text-align: right; padding-right: 12px; }
+.ratio-sig { font-size: 11px; color: #7a7060; text-align: right; }
+.trade-banner { border-radius: 4px; padding: 16px 20px; margin-bottom: 28px; text-align: center; }
+.trade-banner.blackout { background: #200d0d; border: 1px solid #f87171; }
+.trade-banner.clear { background: #0b1a10; border: 1px solid #1d4030; }
+.trade-banner-title { font-size: 14px; font-weight: 700; letter-spacing: 0.05em; }
+.trade-banner.blackout .trade-banner-title { color: #f87171; }
+.trade-banner.clear .trade-banner-title { color: #4ade80; }
+.trade-banner-sub { font-size: 12px; margin-top: 6px; color: #7a7060; }
+.ivr-row { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid #1a1814; }
+.ivr-row:last-child { border-bottom: none; }
+.ivr-sym { font-weight: 600; color: #f0ead8; font-size: 14px; }
+.ivr-sub { font-size: 11px; color: #5c5448; margin-top: 2px; }
+.ivr-val { font-family: 'DM Mono', monospace; font-size: 20px; font-weight: 500; text-align: right; }
+.ivr-sig { font-size: 11px; text-align: right; margin-top: 2px; }
+</style>
+</head>
+<body>
+<div class="masthead">
+  <div class="masthead-eyebrow">The Opening Edge &middot; Pre-Market Intelligence</div>
+  <div class="masthead-title">THE OPENING EDGE</div>
+  <div class="masthead-sub">Tuesday, July 07, 2026 &nbsp;&middot;&nbsp; Data as of 06:39 AM ET</div>
+</div>
+<div class="hero-banner neutral"><div class="hero-narrative">Stocks finished mixed on Monday, July 06, with the S&P 500 slipping 0.18% as tech weighed on sentiment, while jobless claims hitting their lowest level since mid-May offered a bright spot on the labor front. Futures this morning are painting a divided picture — Nasdaq 100 futures are under pressure, down over 1%, though Dow and Russell futures are nudging higher ahead of the open.</div><div class="hero-futures"><div class="hero-future-item"><span class="fut-name">S&P 500</span><span class="fut-pct">-0.10%</span></div><div class="hero-future-item"><span class="fut-name">Nasdaq 100</span><span class="fut-pct">-1.04%</span></div><div class="hero-future-item"><span class="fut-name">Dow Jones</span><span class="fut-pct">+0.36%</span></div><div class="hero-future-item"><span class="fut-name">Russell 2000</span><span class="fut-pct">+0.25%</span></div></div></div>
+
+<div class="section-header"><h2>Market Pulse</h2></div>
+
+<div class="pulse-grid">
+  <div class="pulse-card featured">
+    <div><div class="pulse-label">S&amp;P 500 Futures</div><div class="pulse-value">$7,583.75</div></div>
+    <div style="text-align:right">
+      <div class="pulse-change down">-0.10%</div>
+    </div>
+  </div>
+  <div class="pulse-card">
+    <div class="pulse-label">VIX</div>
+    <div class="pulse-value">15.89</div>
+    <div class="pulse-change up">+2.06%</div>
+    <div style="font-size:10px;color:#4ade80;margin-top:6px;line-height:1.4;">Term Structure: Normal contango (VIX9D 12.37 &lt; VIX 15.89)</div>
+  </div>
+  <div class="pulse-card">
+    <div class="pulse-label">Implied 1-Day Move</div>
+    <div class="pulse-value">&#177;1.00%</div>
+    <div style="font-size:11px;color:#4ade80;margin-top:4px;">Signal: Greed</div>
+  </div>
+</div>
+<div class="vix-row" style="margin-bottom:6px;">
+  <div class="vix-card">
+    <div class="pulse-label">CNN Fear &amp; Greed</div>
+    <div style="font-family:'DM Mono',monospace;font-size:18px;color:#c9a84c;margin:4px 0;">44 / 100</div>
+    <div style="font-size:11px;color:#f87171;">fear</div>
+    <div class="sentiment-bar-wrap"><div class="sentiment-bar-fill" style="width:44.0%"></div></div>
+  </div>
+  <div class="vix-card">
+    <div class="pulse-label">Crypto Fear &amp; Greed</div>
+    <div style="font-family:'DM Mono',monospace;font-size:18px;color:#c9a84c;margin:4px 0;">50 / 100</div>
+    <div style="font-size:11px;color:#f87171;">N/A</div>
+    <div class="sentiment-bar-wrap"><div class="sentiment-bar-fill" style="width:50.0%;background:linear-gradient(90deg,#f87171,#c9a84c)"></div></div>
+  </div>
+</div>
+
+<div class="section-header"><h2>Previous Session Recap</h2></div>
+<table class="markets-table"><thead><tr><th>Index</th><th>Close</th><th>Change</th></tr></thead><tbody><tr><td>S&P 500</td><td>$7,523.98</td><td class="down">-0.18%</td></tr>
+<tr><td>Dow Jones</td><td>$53,179.27</td><td class="up">+0.23%</td></tr>
+<tr><td>Nasdaq</td><td>$25,924.61</td><td class="down">-0.75%</td></tr>
+<tr><td>Russell 2000</td><td>$3,009.54</td><td class="up">+0.45%</td></tr>
+<tr><td style="color:#c9a84c;">Top Gainer: LHSW</td><td>$6.8</td><td class="up">+277.78%</td></tr>
+<tr><td style="color:#f87171;">Top Loser: SRXH</td><td>$1.82</td><td class="down">-66.56%</td></tr>
+</tbody></table>
+
+<div class="section-header"><h2>Global Markets Overnight &#127758;</h2></div>
+<table class="markets-table"><thead><tr><th>Index</th><th>Close</th><th>Change</th></tr></thead><tbody><tr><td>Nikkei 225</td><td>$68,256.96</td><td class="down">-2.12%</td></tr>
+<tr><td>Hang Seng</td><td>$23,496.89</td><td class="down">-0.51%</td></tr>
+<tr><td>DAX</td><td>$25,661.70</td><td class="down">-0.60%</td></tr>
+<tr><td>FTSE 100</td><td>$10,723.45</td><td class="up">+0.67%</td></tr>
+<tr><td>CAC 40</td><td>$8,503.79</td><td class="up">+0.28%</td></tr>
+<tr><td>Euro Stoxx 50</td><td>$6,363.54</td><td class="down">-0.54%</td></tr>
+</tbody></table>
+
+<div class="section-header"><h2>Sector Heatmap &amp; Rotation</h2></div>
+<div class="sector-heatmap-list"><div class="sector-hm-row"><div class="sector-hm-name">Consumer Staples</div><div class="sector-hm-track"><div class="sector-hm-fill pos" style="width:42%;"><span class="sector-hm-label">+1.94%</span></div></div></div>
+<div class="sector-hm-row"><div class="sector-hm-name">Healthcare</div><div class="sector-hm-track"><div class="sector-hm-fill pos" style="width:42%;"><span class="sector-hm-label">+1.93%</span></div></div></div>
+<div class="sector-hm-row"><div class="sector-hm-name">Energy</div><div class="sector-hm-track"><div class="sector-hm-fill pos" style="width:36%;"><span class="sector-hm-label">+1.68%</span></div></div></div>
+<div class="sector-hm-row"><div class="sector-hm-name">Communications</div><div class="sector-hm-track"><div class="sector-hm-fill pos" style="width:33%;"><span class="sector-hm-label">+1.52%</span></div></div></div>
+<div class="sector-hm-row"><div class="sector-hm-name">Utilities</div><div class="sector-hm-track"><div class="sector-hm-fill pos" style="width:31%;"><span class="sector-hm-label">+1.43%</span></div></div></div>
+<div class="sector-hm-row"><div class="sector-hm-name">Real Estate</div><div class="sector-hm-track"><div class="sector-hm-fill pos" style="width:26%;"><span class="sector-hm-label">+1.22%</span></div></div></div>
+<div class="sector-hm-row"><div class="sector-hm-name">Financials</div><div class="sector-hm-track"><div class="sector-hm-fill pos" style="width:12%;"><span class="sector-hm-label">+0.56%</span></div></div></div>
+<div class="sector-hm-row"><div class="sector-hm-name">Consumer Discretionary</div><div class="sector-hm-track"><div class="sector-hm-fill pos" style="width:11%;"><span class="sector-hm-label">+0.51%</span></div></div></div>
+<div class="sector-hm-row"><div class="sector-hm-name">Materials</div><div class="sector-hm-track"><div class="sector-hm-fill neg" style="width:2%;"><span class="sector-hm-label">-0.08%</span></div></div></div>
+<div class="sector-hm-row"><div class="sector-hm-name">Industrials</div><div class="sector-hm-track"><div class="sector-hm-fill neg" style="width:36%;"><span class="sector-hm-label">-1.65%</span></div></div></div>
+<div class="sector-hm-row"><div class="sector-hm-name">Technology</div><div class="sector-hm-track"><div class="sector-hm-fill neg" style="width:48%;"><span class="sector-hm-label">-2.23%</span></div></div></div>
+</div>
+
+<div class="section-header"><h2>Sector Relative Strength vs SPY (20D)</h2></div>
+<div class="sector-grid"><div class="sector-bar"><span class="sector-name">Financials</span><div style="text-align:right;"><span class="sector-pct" style="color:#4ade80;">+7.42%</span><span style="font-size:9px;color:#4ade80;display:block;">Leading</span></div></div>
+<div class="sector-bar"><span class="sector-name">Healthcare</span><div style="text-align:right;"><span class="sector-pct" style="color:#4ade80;">+6.76%</span><span style="font-size:9px;color:#4ade80;display:block;">Leading</span></div></div>
+<div class="sector-bar"><span class="sector-name">Utilities</span><div style="text-align:right;"><span class="sector-pct" style="color:#4ade80;">+4.72%</span><span style="font-size:9px;color:#4ade80;display:block;">Leading</span></div></div>
+<div class="sector-bar"><span class="sector-name">Industrials</span><div style="text-align:right;"><span class="sector-pct" style="color:#4ade80;">+3.78%</span><span style="font-size:9px;color:#4ade80;display:block;">Leading</span></div></div>
+<div class="sector-bar"><span class="sector-name">Materials</span><div style="text-align:right;"><span class="sector-pct" style="color:#4ade80;">+2.72%</span><span style="font-size:9px;color:#4ade80;display:block;">Leading</span></div></div>
+<div class="sector-bar"><span class="sector-name">Consumer Staples</span><div style="text-align:right;"><span class="sector-pct" style="color:#4ade80;">+2.18%</span><span style="font-size:9px;color:#4ade80;display:block;">Leading</span></div></div>
+<div class="sector-bar"><span class="sector-name">Real Estate</span><div style="text-align:right;"><span class="sector-pct" style="color:#4ade80;">+1.16%</span><span style="font-size:9px;color:#4ade80;display:block;">Leading</span></div></div>
+<div class="sector-bar"><span class="sector-name">Consumer Discretionary</span><div style="text-align:right;"><span class="sector-pct" style="color:#4ade80;">+1.16%</span><span style="font-size:9px;color:#4ade80;display:block;">Leading</span></div></div>
+<div class="sector-bar"><span class="sector-name">Communications</span><div style="text-align:right;"><span class="sector-pct" style="color:#f87171;">-0.62%</span><span style="font-size:9px;color:#f87171;display:block;">Lagging</span></div></div>
+<div class="sector-bar"><span class="sector-name">Technology</span><div style="text-align:right;"><span class="sector-pct" style="color:#f87171;">-4.16%</span><span style="font-size:9px;color:#f87171;display:block;">Lagging</span></div></div>
+<div class="sector-bar"><span class="sector-name">Energy</span><div style="text-align:right;"><span class="sector-pct" style="color:#f87171;">-8.29%</span><span style="font-size:9px;color:#f87171;display:block;">Lagging</span></div></div>
+</div>
+<p class="note">20-day return vs SPY. Leading sectors define rotation theme.</p>
+
+<div class="section-header"><h2>Commodities &amp; Crypto</h2></div>
+<table class="asset-table"><thead><tr><th>Asset</th><th>Price</th><th>24h Chg</th><th>Signal</th></tr></thead><tbody><tr><td>Gold</td><td>$4,178.00</td><td class="up">+0.55%</td><td><span class="signal-bull">Bullish</span></td></tr>
+<tr><td>Silver</td><td>$61.73</td><td class="down">-0.31%</td><td><span class="signal-bear">Bearish</span></td></tr>
+<tr><td>WTI Crude</td><td>$69.58</td><td class="up">+1.50%</td><td><span class="signal-bull">Bullish</span></td></tr>
+<tr><td>Brent Crude</td><td>$73.13</td><td class="up">+1.58%</td><td><span class="signal-bull">Bullish</span></td></tr>
+<tr><td>Natural Gas</td><td>$3.24</td><td class="down">-0.22%</td><td><span class="signal-bear">Bearish</span></td></tr>
+<tr><td>Copper</td><td>$6.24</td><td class="up">+0.96%</td><td><span class="signal-bull">Bullish</span></td></tr>
+<tr><td>Bitcoin (BTC)</td><td>$63,057.00</td><td class="up">+2.80%</td><td><span class="signal-bull">Bullish</span></td></tr>
+<tr><td>Ethereum (ETH)</td><td>$1,768.43</td><td class="up">+2.10%</td><td><span class="signal-bull">Bullish</span></td></tr>
+<tr><td>Solana (SOL)</td><td>$80.81</td><td class="up">+1.46%</td><td><span class="signal-bull">Bullish</span></td></tr>
+<tr><td>Dogecoin (DOGE)</td><td>$0.07</td><td class="down">-0.56%</td><td><span class="signal-bear">Bearish</span></td></tr>
+</tbody></table>
+
+<div class="section-header"><h2>Forex &amp; Dollar Index</h2></div>
+<div class="forex-grid"><div class="forex-card"><div class="forex-name">DXY (Dollar Index)</div><div class="forex-price">100.889</div><div class="forex-pct up">+0.04%</div></div>
+<div class="forex-card"><div class="forex-name">EUR/USD</div><div class="forex-price">1.1443</div><div class="forex-pct up">+0.05%</div></div>
+<div class="forex-card"><div class="forex-name">USD/JPY</div><div class="forex-price">161.452</div><div class="forex-pct up">+0.24%</div></div>
+<div class="forex-card"><div class="forex-name">GBP/USD</div><div class="forex-price">1.3386</div><div class="forex-pct up">+0.25%</div></div>
+<div class="forex-card"><div class="forex-name">USD/CAD</div><div class="forex-price">1.4205</div><div class="forex-pct up">+0.01%</div></div>
+<div class="forex-card"><div class="forex-name">AUD/USD</div><div class="forex-price">0.6953</div><div class="forex-pct up">+0.23%</div></div>
+</div>
+
+
+<div class="section-header"><h2>Intermarket Ratios &amp; Breadth</h2></div>
+<div style="background:#111009;border:1px solid #2a2620;border-radius:4px;padding:0 16px;"><div class="ratio-row"><div class="ratio-key">Copper / Gold Ratio</div><div class="ratio-val">1.4929</div><div class="ratio-sig">Above avg (>0.25)</div></div>
+<div class="ratio-row"><div class="ratio-key">Oil / Gold Ratio</div><div class="ratio-val">60.05</div><div class="ratio-sig">Above avg (>25)</div></div>
+<div class="ratio-row"><div class="ratio-key">Gold / Silver Ratio</div><div class="ratio-val">67.7</div><div class="ratio-sig">Below avg (<70)</div></div>
+<div class="ratio-row"><div class="ratio-key">CBOE SKEW Index</div><div class="ratio-val">145.38</div><div class="ratio-sig">Above avg (>145)</div></div>
+<div class="ratio-row" style="border-bottom:none;"><div class="ratio-key">SPY Max Pain (exp 2026-07-07)</div><div class="ratio-val">$750</div><div class="ratio-sig" style="color:#c9a84c;">SPY is -0.04% from max pain</div></div>
+</div>
+
+<div class="section-header"><h2>Yields &amp; Rates</h2></div>
+<div class="yields-row"><div class="yield-card"><div class="yield-label">2-Year</div><div class="yield-rate">4.14%</div><div class="yield-bps" style="color:#4ade80;">-3.0 bps</div></div><div class="yield-card"><div class="yield-label">10-Year</div><div class="yield-rate">4.49%</div><div class="yield-bps" style="color:#f87171;">+1.0 bps</div></div><div class="yield-card"><div class="yield-label">30-Year</div><div class="yield-rate">4.98%</div><div class="yield-bps" style="color:#f87171;">+1.0 bps</div></div></div>
+<div style="display:flex;gap:10px;margin-top:10px;flex-wrap:wrap;"><div class="vix-card" style="flex:1;min-width:140px;"><div class="pulse-label">Effective Fed Funds Rate</div><div style="font-family:'DM Mono',monospace;font-size:18px;color:#f0ead8;margin-top:4px;">3.63%</div></div><div class="vix-card" style="flex:1;min-width:160px;"><div class="pulse-label">Yield Curve</div><div style="font-size:12px;color:#4ade80;margin-top:4px;font-weight:500;">Normal</div><div style="font-size:11px;color:#5c5448;margin-top:2px;font-family:'DM Mono',monospace;">2s10s: +35 bps</div></div><div class="vix-card" style="flex:1;min-width:140px;"><div class="pulse-label">Bond/Equity Signal</div><div style="font-size:12px;color:#c9a84c;margin-top:4px;font-weight:600;">BOTH FALLING</div><div style="font-size:11px;color:#5c5448;margin-top:2px;">Risk-off with no safe haven bid, unusual signal</div></div></div>
+
+<div class="section-header"><h2>Key Technical Levels</h2></div>
+<table class="tech-table"><thead><tr><th>ETF</th><th>Price</th><th>52W H/L</th><th>Status</th></tr></thead><tbody><tr><td>SPY</td><td>$749.76</td><td>$758.45 / $626.01</td><td><span class="golden-cross">Golden Cross</span></td></tr>
+<tr><td>QQQ</td><td>$713.63</td><td>$747.83 / $554.99</td><td><span class="golden-cross">Golden Cross</span></td></tr>
+<tr><td>IWM</td><td>$298.69</td><td>$302.72 / $221.39</td><td><span class="golden-cross">Golden Cross</span></td></tr>
+<tr><td>DIA</td><td>$530.72</td><td>$532.54 / $439.64</td><td><span class="golden-cross">Golden Cross</span></td></tr>
+</tbody></table>
+<p class="note">SPY above 5D, 20D, 50D, 200D &nbsp;|&nbsp; QQQ above 50D, 200D &nbsp;|&nbsp; IWM above 20D, 50D, 200D &nbsp;|&nbsp; DIA above 5D, 20D, 50D, 200D</p>
+
+<div class="section-header"><h2>Market Breadth</h2></div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;"><div class="pulse-card"><div class="pulse-label">% Above 50-Day SMA</div><div style="font-family:'DM Mono',monospace;font-size:22px;color:#f0ead8;margin:4px 0;">68.0%</div><div style="font-size:11px;color:#4ade80;">Signal: Bullish</div></div><div class="pulse-card"><div class="pulse-label">% Above 200-Day SMA</div><div style="font-family:'DM Mono',monospace;font-size:22px;color:#f0ead8;margin:4px 0;">70.0%</div><div style="font-size:11px;color:#4ade80;">Signal: Bullish</div></div></div>
+
+<div class="section-header"><h2>Volatility Environment</h2></div>
+<div style="background:#111009;border:1px solid #2a2620;border-radius:4px;padding:0 16px;"><div class="ivr-row"><div><div class="ivr-sym">SPY</div><div class="ivr-sub">HV30 ≈ 15.4% &nbsp;(1-yr rank)</div></div><div><div class="ivr-val" style="color:#4ade80;">HV Rank 76</div><div class="ivr-sig" style="color:#4ade80;">Elevated vol — expect wider intraday ranges</div></div></div>
+<div class="ivr-row"><div><div class="ivr-sym">QQQ</div><div class="ivr-sub">HV30 ≈ 29.6% &nbsp;(1-yr rank)</div></div><div><div class="ivr-val" style="color:#4ade80;">HV Rank 100</div><div class="ivr-sig" style="color:#4ade80;">Elevated vol — expect wider intraday ranges</div></div></div>
+<div class="ivr-row"><div><div class="ivr-sym">IWM</div><div class="ivr-sub">HV30 ≈ 19.3% &nbsp;(1-yr rank)</div></div><div><div class="ivr-val" style="color:#4ade80;">HV Rank 55</div><div class="ivr-sig" style="color:#4ade80;">Elevated vol — expect wider intraday ranges</div></div></div>
+</div>
+<div style="display:flex;justify-content:space-between;align-items:center;background:#111009;border:1px solid #2a2620;border-radius:4px;padding:12px 16px;margin-top:8px;"><div class="pulse-label" style="margin:0;">SPY Put/Call Ratio</div><div style="text-align:right;"><span style="font-family:'DM Mono',monospace;font-size:18px;color:#c9a84c;">1.02</span>&nbsp;&nbsp;<span style="font-size:11px;color:#c9a84c;">Neutral</span></div></div>
+
+<div class="section-header"><h2>Social Media Momentum &#128241;</h2></div>
+<div style="margin-bottom:12px;"><div style="font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:#5c5448;margin-bottom:6px;">Yahoo Finance Trending</div><div class="chips"><span class="chip">RIVN</span><span class="chip">CRNX</span><span class="chip">FISV</span><span class="chip">SUGP</span><span class="chip">CCHH</span><span class="chip">CPOP</span><span class="chip">TDTH</span><span class="chip">BJDX</span><span class="chip">AMPG</span><span class="chip">SPCX</span></div></div>
+
+<div class="section-header"><h2>News &amp; Catalyst Briefing</h2></div>
+<div style="background:#111009;border:1px solid #2a2620;border-radius:4px;padding:0 16px;"><div class="news-item"><div class="news-headline">Tesla deliveries beat forecasts as Europe's rebound brightens outlook</div><div class="news-body">Tesla delivered a record 480,126 vehicles in the second quarter of 2026, surpassing Wall Street expectations. A notable recovery in European demand contributed significantly to the stronger-than-expected results. The performance has raised optimism that Tesla may return to positive annual delivery growth after a challenging prior year.</div></div><div class="news-item"><div class="news-headline">Chip Stocks Tumble on AI Anxiety as Oil Climbs: Markets Wrap</div><div class="news-body">Semiconductor stocks fell sharply as investors grew uncertain whether the scale of artificial intelligence infrastructure spending can be justified by near-term returns. Rising oil prices pushed bond yields higher, adding additional pressure to equity valuations across the broader market. The dual headwinds from energy costs and AI valuation concerns weighed on major indices during the session.</div></div><div class="news-item"><div class="news-headline">Best Energy Stocks</div><div class="news-body">The energy sector encompasses companies engaged in the production, exploration, refining, and transportation of consumable fuels including oil, gas, and coal. Energy stocks have drawn renewed attention as oil prices climb, lifting the revenue outlook for producers and refiners. The sector remains closely tied to global commodity price movements and broader macroeconomic conditions.</div></div><div class="news-item"><div class="news-headline">Investors watching for Fed clues, earnings signs - Finance & Commerce</div><div class="news-body">Market participants are closely monitoring upcoming Federal Reserve communications for signals on the future path of interest rates. Corporate earnings reports are also in focus as investors assess whether company fundamentals can support current equity valuations. The combination of monetary policy uncertainty and earnings season creates a pivotal backdrop for near-term market direction.</div></div><div class="news-item"><div class="news-headline">Stocks making the biggest moves premarket: Fiserv, Crinetics Pharmaceuticals, Micron & more</div><div class="news-body">Several stocks posted notable price moves in premarket trading on Tuesday, including Fiserv, Crinetics Pharmaceuticals, and Micron Technology. Premarket volatility often reflects overnight news, earnings releases, or analyst actions that shift investor sentiment ahead of the regular session open. The moves in these names signal heightened attention to company-specific developments as the trading day begins.</div></div></div>
+
+<div class="section-header"><h2>Sentiment Analysis</h2></div>
+<div class="pulse-card" style="margin-bottom:12px;"><div class="pulse-label">News Sentiment (based on 50 articles)</div><div style="font-family:'DM Mono',monospace;font-size:22px;color:#f0ead8;margin:4px 0;">76/100 — <span style="color:#4ade80;">Strongly Bullish</span></div><div class="sentiment-bar-wrap"><div class="sentiment-bar-fill" style="width:76%"></div></div></div>
+
+<div class="section-header"><h2>Upcoming Earnings &#128197;</h2></div>
+<table class="earn-table"><thead><tr><th>Ticker</th><th>Company</th><th>Date</th><th>EPS Est.</th></tr></thead><tbody><tr><td>NFLX</td><td>NETFLIX INCORPORATED</td><td>Thu Jul 16</td><td>$0.79</td></tr>
+<tr><td>UNH</td><td>UNITEDHEALTH GROUP INCORPORATED</td><td>Thu Jul 16</td><td>$4.84</td></tr>
+<tr><td>BAC</td><td>BANK OF AMERICA CORPORATION</td><td>Tue Jul 14</td><td>$1.11</td></tr>
+<tr><td>GS</td><td>GOLDMAN SACHS GROUP INCORPORATED (THE)</td><td>Tue Jul 14</td><td>$14.01</td></tr>
+<tr><td>JPM</td><td>J P MORGAN CHASE & COMPANY</td><td>Tue Jul 14</td><td>$5.49</td></tr>
+<tr><td colspan="4" style="color:#5c5448;font-size:12px;">Also reporting: DAL, HIFS, LEDS, NB, PLG, VMAR, ALV, BFC, DIT, FITB</td></tr>
+</tbody></table>
+<p class="note">Always verify at earningswhispers.com</p>
+
+<div class="section-header"><h2>Recent Earnings Results &#9989;</h2></div>
+<table class="earn-table"><thead><tr><th>Ticker</th><th>Company</th><th>Date</th><th>EPS Est.</th><th>EPS Actual</th><th>Surprise</th><th>Result</th></tr></thead><tbody><tr><td><strong>NKE</strong></td><td style="font-size:12px;color:#9a9080;">Nike, Inc.</td><td>Tue Jun 30</td><td>0.11</td><td>0.20</td><td>+81.8%</td><td style="color:#4ade80;font-weight:600;">Beat</td></tr>
+</tbody></table>
+<p class="note">Data from Nasdaq calendar &amp; yfinance. Major/known tickers only. Always verify.</p>
+
+<div class="section-header"><h2>Upcoming IPOs &#128200;</h2></div>
+<p class="note">No IPO activity found on Nasdaq calendar this month.</p>
+
+<div class="section-header"><h2>Fed &amp; Macro Calendar</h2></div>
+<div style="background:#111009;border:1px solid #2a2620;border-radius:4px;padding:0 16px;"><div class="edge-row"><span class="edge-key">Next FOMC Meeting</span><span class="edge-val">July 29-30, 2026 &nbsp;(22d away)</span></div>
+<div class="edge-row"><span class="edge-key">Effective Fed Funds Rate</span><span class="edge-val">3.63%</span></div>
+<div class="edge-row"><span class="edge-key">Rate Probability</span><span class="edge-val"><a href="https://cmegroup.com" style="color:#c9a84c;">Check CME FedWatch &#8594;</a></span></div>
+<div class="edge-row"><span class="edge-key">CPI (2026-05-01)</span><span class="edge-val">335.1 | +0.63% MoM</span></div>
+<div class="edge-row" style="border-bottom:none;"><span class="edge-key">Unemployment (2026-06-01)</span><span class="edge-val">4.2%</span></div>
+</div>
+
+<div class="section-header"><h2>Economic Calendar</h2></div>
+<div style="background:#111009;border:1px solid #2a2620;border-radius:4px;padding:0 16px;"><div class="edge-row" style=""><span class="edge-key" style="color:#c9a84c;">[HIGH] JOLTS Job Openings</span><span class="edge-val">Tue Jul 07 (TODAY — pre-market)</span></div>
+<div class="edge-row" style=""><span class="edge-key" style="">[HIGH] Initial Jobless Claims</span><span class="edge-val">Thu Jul 09 (in 2d)</span></div>
+<div class="edge-row" style=""><span class="edge-key" style="">[VERY HIGH] CPI</span><span class="edge-val">Mon Jul 13 (in 6d)</span></div>
+<div class="edge-row" style=""><span class="edge-key" style="">[HIGH] PPI</span><span class="edge-val">Mon Jul 13 (in 6d)</span></div>
+<div class="edge-row" style=""><span class="edge-key" style="">[HIGH] Retail Sales</span><span class="edge-val">Wed Jul 15 (in 8d)</span></div>
+<div class="edge-row" style=""><span class="edge-key" style="">[HIGH] GDP Advance Estimate</span><span class="edge-val">Wed Jul 29 (in 22d)</span></div>
+<div class="edge-row" style=""><span class="edge-key" style="">[HIGH] PCE Price Index</span><span class="edge-val">Thu Jul 30 (in 23d)</span></div>
+<div class="edge-row" style=""><span class="edge-key" style="">[HIGH] Core PCE</span><span class="edge-val">Thu Jul 30 (in 23d)</span></div>
+<div class="edge-row" style=""><span class="edge-key" style="">[HIGH] PMI Manufacturing</span><span class="edge-val">Mon Aug 03 (in 27d)</span></div>
+<div class="edge-row" style=""><span class="edge-key" style="">[HIGH] PMI Services</span><span class="edge-val">Wed Aug 05 (in 29d)</span></div>
+<div class="edge-row" style="border-bottom:none;"><span class="edge-key" style="">[VERY HIGH] Nonfarm Payrolls</span><span class="edge-val">Fri Aug 07 (in 31d)</span></div>
+</div>
+
+<div class="disclaimer">This report is for informational and educational purposes only and does not constitute financial advice.<br>Past performance is not indicative of future results. Always conduct your own research and consult a licensed financial advisor.<br><br>The Opening Edge &middot; Pre-Market Intelligence &middot; Tuesday, July 07, 2026</div>
+</body>
+</html>
